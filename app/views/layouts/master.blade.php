@@ -6,7 +6,7 @@
 	<title>Tasks</title>
 </head>
 <body>
-	<div class="content-wrap">
+	<div class="container col-md-6 col-md-offset-3">
 		@yield('content')
 	</div>
 </body>
