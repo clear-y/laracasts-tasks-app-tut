@@ -51,6 +51,7 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
+// 404 page
 App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $exception) {
     return View::make('errors.404');
 });

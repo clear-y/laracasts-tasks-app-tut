@@ -5,7 +5,10 @@
 	<ul class="list-group">
 		@foreach($tasks as $task)
 
-			<li class="list-group-item">{{ link_to("tasks/$task->id", $task->title) }}</li>		
+			<li class="list-group-item">                
+                <img src="{{ gravatar($task->user->email) }}" alt="{{ $task->user->name }}">
+                {{ link_to("tasks/$task->id", $task->title) }}
+            </li>		
 
 		@endforeach
 	</ul>
