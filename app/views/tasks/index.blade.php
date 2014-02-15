@@ -6,8 +6,8 @@
 		@foreach($tasks as $task)
 
 			<li class="list-group-item">                
-                <img src="{{ gravatar($task->user->email) }}" alt="{{ $task->user->name }}">
-                {{ link_to("tasks/$task->id", $task->title) }}
+                <a href="/{{ $task->user->username }}/tasks"><img src="{{ gravatar($task->user->email) }}" alt="{{ $task->user->name }}"></a>
+                {{ link_to_task($task) }}
             </li>		
 
 		@endforeach
